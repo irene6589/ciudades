@@ -19,7 +19,9 @@ public interface DaoCiudad {
 
     @Delete
     void deleteCiudad (City ciudad);
-   // void deleteCiudades (City ciudades);
+
+    @Delete
+    void deleteCiudades (List<City> ciudades);
 
     @Query("SELECT * FROM city")
     LiveData<List<City>> getAllCities();
@@ -30,18 +32,8 @@ public interface DaoCiudad {
     @Query("SELECT * FROM city WHERE visitado=1")
     LiveData<List<City>> ciudadVisitada();
 
-    @Query("SELECT * FROM city WHERE favorito=1")
-    LiveData<List<City>> ciudadFavorita();
-
-//    @Query("INSERT INTO city VALUES (:Nombre, :Pais, :Latitud, :Longitud, 0, 0)")
- //   void insertCity(String Nombre, String Pais, double Latitud, double Longitud, boolean visitada, boolean favorita);
-
-    @Query("SELECT * FROM city WHERE city_nombre = :Nombre")
-    LiveData<List<City>> buscarCiudad(String Nombre);
-
     @Query("SELECT COUNT(*) FROM city")
     LiveData<Integer> countList();
-
 
 
 }

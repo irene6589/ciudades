@@ -38,6 +38,13 @@ public class CityRepository {
         }).start();
     }
 
+    public void deleteCiudades(List<City> ciudades){
+        new Thread(new Runnable() {
+            @Override
+            public void run() { daoCity.deleteCiudades(ciudades); }
+        }).start();
+    }
+
     public void insertarCiudad(City ciudad) {
         new Thread(new Runnable() {
             @Override
@@ -56,4 +63,5 @@ public class CityRepository {
     }
 
     public LiveData<List<City>> getciudadVisitada() { return daoCity.ciudadVisitada(); }
+
 }

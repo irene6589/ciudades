@@ -12,7 +12,6 @@ public class City {
     private double latitud;
     private double longitud;
     private boolean visitado;
-    private boolean favorito;
     private int imagen;
 
     public int getId() {
@@ -61,14 +60,6 @@ public class City {
 
     public void setVisitado(boolean visitado) {
         this.visitado = visitado;
-    }
-
-    public boolean isFavorito() {
-        return favorito;
-    }
-
-    public void setFavorito(boolean favorito) {
-        this.favorito = favorito;
     }
 
     public int getImagen() {

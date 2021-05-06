@@ -33,39 +33,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/delete"
         app:layout_constraintStart_toEndOf="@+id/delete"
         app:layout_constraintTop_toTopOf="@+id/delete"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/edit"
-        android:layout_width="28dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/visit"
         android:layout_width="29dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/city_name"
-        app:layout_constraintEnd_toStartOf="@+id/fav"
-        app:layout_constraintTop_toTopOf="@+id/city_name"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/checked" />
-
-    <ImageView
-        android:id="@+id/fav"
-        android:layout_width="32dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/visit"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/visit"
-        app:layout_constraintVertical_bias="0.8"
-        app:srcCompat="@drawable/ic_baseline_star_24" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/checked" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

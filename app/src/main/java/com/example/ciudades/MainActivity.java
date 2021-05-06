@@ -33,15 +33,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cityRepository =new CityRepository(getApplicationContext());
+        cityRepository = new CityRepository(getApplicationContext());
 
         FloatingActionButton bAddCity = findViewById(R.id.buttonAdd);
         bAddCity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, CityActivity.class);
-                i.putExtra("Edicion", false);
                 startActivityForResult(i, 5);
+            }
+        });
+        FloatingActionButton bAllCities = findViewById(R.id.allCities);
+        bAllCities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(i);
             }
         });
 
@@ -104,4 +111,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Hay un error al insertar la ciudad", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
